@@ -1,48 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Canvas LetSocify</title>
-</head>
-<body>
-	<script type="text/javascript">
-		function getQueryVariable(queryurl,variable) {
-			if(queryurl.indexOf("?")>-1){  
-				var query = queryurl.split("?")[1];
-				var vars = query.split("&");
-				for (var i=0;i<vars.length;i++) {
-					var pair = vars[i].split("=");
-					if (pair[0] == variable) {
-						return pair[1];
-					}
-				} 
-			}
-		}
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			if (window.XMLHttpRequest)  
-			{  
-				xmlhttp=new XMLHttpRequest();
-			}
-			else
-			{  
-				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
-			}
-			xmlhttp.onreadystatechange=function()  
-			{  
-				if(xmlhttp.readyState==4 && xmlhttp.status==200)    
-				{  
-					console.log(xmlhttp.responseText);
-					if(getQueryVariable(location.search,"opencanvas")==1){
-						var newDiv=document.createElement("div");
-						newDiv.innerHTML='<iframe src="'+decodeURIComponent(getQueryVariable(location.search,"redirect"))+'" style="width:100%;height:100%;top:0;left:0;position:fixed"></iframe>';
-						document.getElementsByTagName("body")[0].appendChild(newDiv);
-					}else{
-						window.top.location="http://analysis.letsocify.com/?redirect="+getQueryVariable(location.search,"redirect");
-					}
-				}  
-			};
-			xmlhttp.open("GET","https://5yj158xzyg.execute-api.us-west-2.amazonaws.com/Production?tagid="+getQueryVariable(location.search,"tagid"),true);
-			xmlhttp.send(); 	
-		});
-	</script>
-</body>
-</html>
+<div id="sitemap1"><div class="loading">Loading....</div></div>
+<script> //<![CDATA[
+/* Blogger Sitemap Dropdown */
+var toc_config = {containerId:'sitemap1', showNew:0, sortAlphabetically:{thePanel:true, theList:true}, activePanel:1, slideSpeed:{down:400, up:400}, slideEasing:{down: null, up: null}, slideCallback:{down:function(){}, up:function(){}}, clickCallback:function(){}, jsonCallback:'sitemap1',delayLoading: 0};
+window.onload = function(){
+!function(e,o){var t=o.getElementById(toc_config.containerId),c=o.getElementsByTagName("head")[0],n=[];e[toc_config.jsonCallback]=function(e){for(var o,c,i=e.feed.entry,a=e.feed.category,l="",s=0,d=a.length;d>s;++s)n.push(a[s].term);for(var r=0,f=i.length;f>r;++r)(toc_config.showNew||toc_config.showNew>0)&&r<toc_config.showNew+1&&(i[r].title.$t+=" %new%");i=toc_config.sortAlphabetically.theList?i.sort(function(e,o){return e.title.$t.localeCompare(o.title.$t)}):i,toc_config.sortAlphabetically.thePanel&&n.sort();for(var g=0,h=n.length;h>g;++g){l+='<div class=\ "judul\ ">'+n[g]+'</div>',l+='<div class=\ "konten\ "><ol>';for(var _=0,p=i.length;p>_;++_){o=i[_].title.$t;for(var w=0,u=i[_].link.length;u>w;++w)if("alternate"==i[_].link[w].rel){c=i[_].link[w].href;break}for(var v=0,m=i[_].category.length;m>v;++v)n[g]==i[_].category[v].term&&(l+='<li><a href=\ "'+c+'\ " title=\ "'+o.replace(/ \%new\%$/,"")+'\ ">'+o.replace(/ \%new\%$/,"")+'</a></li>')}l+='</ol></div>'}t.innerHTML=l,"undefined"!=typeof jQuery&&($("#"+toc_config.containerId+" .konten").hide(),$("#"+toc_config.containerId+" .judul").click(function(){$(this).hasClass("aktif")||(toc_config.clickCallback(this),$("#"+toc_config.containerId+" .judul").removeClass("aktif").next().slideUp(toc_config.slideSpeed.up,toc_config.slideEasing.up,toc_config.slideCallback.up),$(this).addClass("aktif").next().slideDown(toc_config.slideSpeed.down,toc_config.slideEasing.down,toc_config.slideCallback.down))}).eq(toc_config.activePanel-1).addClass("aktif").next().slideDown(toc_config.slideSpeed.down,toc_config.slideEasing.down,toc_config.slideCallback.down))};var i=o.createElement("script");i.src="https://wikindly.blogspot.com/feeds/posts/summary?alt=json-in-script&max-results=9999&callback="+toc_config.jsonCallback,"onload"==toc_config.delayLoading?e.onload=function(){c.appendChild(i)}:e.setTimeout(function(){c.appendChild(i)},toc_config.delayLoading)}(window,document);
+}
+//]]> </script>
+<style type='text/css' scoped="">
+/* Blogger Sitemap Dropdown */
+#sitemap1 {background-color:#fff; color:#1d2129; font-weight:400; border:1px solid #ccc;}
+#sitemap1 .loading {padding:10px 15px; color:#666;}
+#sitemap1 .judul {background-color:#008c5f; color:#fff; font-size:125%; font-weight:600; padding:15px; cursor:pointer; border-bottom:1px solid #fff; letter-spacing:1px; transition:all .3s ease;}
+#sitemap1 .judul:last-child {border-bottom:0px;}
+#sitemap1 .judul:hover {background-color:#1d2129;}
+#sitemap1 .judul:after {content:''; width:0px; height:0px; position:relative; float:right; top:10px; right:10px; border:5px solid transparent; border-color:#fff transparent transparent; transition:all .3s ease}
+#sitemap1 .judul.aktif {background-color:#1d2129;}
+#sitemap1 .judul.aktif:after {border-color:#fff transparent transparent; top:5px; -webkit-transform:rotate(-180deg); -moz-transform:rotate(-180deg); -ms-transform:rotate(-180deg); -o-transform:rotate(-180deg); transform:rotate(-180deg)}
+#sitemap1 .konten ol, #sitemap1 .konten ol li {list-style:none; list-style-type:none; margin:0px; padding:0px; font-weight:400;}
+#sitemap1 .konten ol li:nth-of-type(even) {background-color:#e9e9e9;}
+#sitemap1 .konten ol li:nth-of-type(odd) {background-color:#fff}
+#sitemap1 .konten ol li a {text-decoration:none; padding:10px 15px; display:block; color:#666; line-height:1.5em; transition:all .3s ease;}
+#sitemap1 .konten ol li a:hover {color:#000;}
+</style>
